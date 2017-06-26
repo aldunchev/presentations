@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Living Style guide presentation</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Living style guide</h1>
+					<p>and</p>
+					<h2>Component driven front-end development</h2>
+					<p><small>by Alexander Dunchev</small></p>
+				</section>
+
+				<section>
+					<h2>What is a living style guide?</h2>
+					<p class="fragment">It is a methodology for documenting your CSS</p>
+					<p class="fragment">A set of components(blocks) which look and feel are defined by the web site styles(CSS)</p>
+					<p class="fragment">Thinking of the website design as components not pages.</p>
+				</section>
+
+				<section>
+					<h2>What is the tool used for generating the style guide?</h2>
+					<p class="fragment">
+						<a href="https://github.com/kss-node/kss-node" target="_blank">KSS Node: </a>
+						Automates the generation of the style guide
+					</p>
+					<p class="fragment">
+						Example
+						<img src="./img/StyleGuideCTA.png" alt="kss node example">
+					</p>
+				</section>
+
+				<section>
+					<h2>Examples and a bit of technical explanation</h2>
+					<a href="http://beekeeper.dev/themes/custom/bee_theme/assets/styleguide/section-components.html#kssref-components-cta">Call to action component</a>
+				</section>
+
+				<section>
+					<h3>Why one should consider using a style guide</h3>
+					<p class="fragment">
+						Developers
+						<ul class="fragment">
+							<li>Avoid code repetition - style guide first approach</li>
+							<li>CMS agnostic</li>
+							<li>Could be used by back-end developers to integrate into CMS</li>
+						</ul>
+					</p>
+					<p class="fragment">
+						Content Editors
+						<ul class="fragment">
+							<li>Get a visual overview of the components while building pages</li>
+						</ul>
+					</p>
+				</section>
+
+				<section>
+					<h4>Thank you!</h4>
+					<p>Questions</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
